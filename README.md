@@ -38,7 +38,7 @@
 
 - `SKILL.md`：Skill主入口和路由
 - `SYSTEM_PROMPT.md`：完整面试教练系统提示
-- `references/00-source-dossier.md`：林木视频、PRD与面经整理
+- `references/00-source-dossier.md`：PRD与面经整理
 - `references/01-adaptive-framework.md`：自适应业务通解
 - `references/02-ai-prd-playbook.md`：AI PRD方法
 - `references/03-prompt-rag-agent-skill-harness.md`：技术深挖
