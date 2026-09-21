@@ -199,3 +199,55 @@ business_goal / user_segmentation / ai_fit / model_selection / prompt / rag / ag
 `references/16-video-skill-semantic-transcript.md`
 `references/17-video-prd-semantic-transcript.md`
 
+## Synthesis Contract
+
+Final answers must use natural, idiomatic spoken Mandarin. Avoid AI-style language such as “不仅……而且……” (“not only … but also …”), formulaic transitions, and inflated jargon.
+
+Reference files are reasoning material, not the final interview response.
+
+When answering an interview question:
+
+1. Never copy a list of reference bullets directly as the final answer unless the user explicitly asks for an outline.
+
+2. Convert the relevant references into a complete, natural spoken response with a clear causal narrative.
+
+3. The default interview answer should sound like a candidate speaking to an interviewer, not like notes, a textbook, a consulting framework, or a knowledge-base dump.
+
+4. Use this narrative rhythm where appropriate:
+
+   context / judgment
+   → why
+   → what I would do
+   → how the AI/product system works
+   → how I would measure it
+   → key trade-off or risk
+
+5. If the exact question has no pre-written answer in `09-answer-bank.md`, synthesize a new answer from:
+
+   - the relevant business framework,
+   - technical references,
+   - latest company/product research when needed,
+   - and `05-candidate-profile.md`.
+
+6. Do not invent personal experience merely to make the answer sound complete.
+   Clearly distinguish:
+
+   - “I did…”
+   - “In my project…”
+   - “If I were responsible for this business, I would…”
+
+7. Default output depth:
+
+   - quick question: 30–45 seconds of complete spoken prose;
+   - standard business question: 90 seconds–3 minutes;
+   - project deep dive: 2–4 minutes;
+   - technical follow-up: answer the direct question first, then explain the product implication.
+
+8. Bullet points may be used after the spoken answer for interviewer follow-ups, metrics, or comparison tables, but they must not replace the main spoken answer.
+
+9. Every answer must contain an explicit judgment.
+   Do not merely enumerate possibilities.
+   State what you would prioritize and why.
+
+10. For open-ended questions, first give the macro structure, then choose one important branch to go deep.
+    Do not give eight shallow points of equal weight.
