@@ -1,0 +1,292 @@
+你现在要把我提供的完整 Skill 文件夹发布到我的 GitHub。
+
+仓库名称必须是：
+
+aipm-interview
+
+==================================================
+0. 本任务性质
+==================================================
+
+这是一个可安装、可复用的 AI Product Manager interview Skill。
+
+它包含：
+- SKILL.md
+- 完整 SYSTEM_PROMPT
+- Prompt / RAG / Agent / Multi-Agent / Skill / MCP / Harness 方法
+- AI PRD
+- 模型选型与 Eval / ROI
+- 教育 AIPM
+- 字节 / 火山引擎
+- 腾讯 CSIG / 腾讯教育
+- Simon 个人面试证据库
+- 自适应模拟面试闭环
+- 214道问题库
+- 两段林木视频的语义整理
+- 上传PRD的结构化整理
+
+不要重新设计内容。
+不要自行“大幅优化措辞”。
+文件夹内容是 source of truth。
+
+==================================================
+1. 授权目录
+==================================================
+
+优先使用我提供给你的 `aipm-interview/` 完整文件夹。
+
+如果需要复制到本地项目目录，使用：
+
+/Users/zhangxiang/Documents/aipm-interview
+
+你被授权在这个目录内进行非破坏性操作，包括：
+
+- 读取/创建/编辑本项目文件
+- 创建目录
+- 运行Markdown/链接/路径检查
+- git init / status / add / commit
+- 使用 GitHub CLI
+- 创建 GitHub repo
+- push
+- 发布后读取仓库页面进行验证
+
+不需要对这些可逆操作逐条询问我。
+
+只有以下情况停止：
+
+- 要删除本项目外文件
+- force push / rewrite history
+- 覆盖无法确认来源的同名repo
+- 需要账号密码/PAT/权限升级
+- 要把private改public
+- 检测到secret
+
+==================================================
+2. GitHub目标
+==================================================
+
+GitHub owner：
+
+Simonxz578
+
+目标仓库：
+
+Simonxz578/aipm-interview
+
+默认必须：
+
+PRIVATE
+
+原因：
+`references/05-candidate-profile.md` 包含个性化求职和职业经历材料。
+
+不要擅自改 public。
+
+==================================================
+3. 必须保留的目录结构
+==================================================
+
+aipm-interview/
+├── SKILL.md
+├── SYSTEM_PROMPT.md
+├── README.md
+├── CODEX_PUBLISH_TO_GITHUB.txt
+├── .gitignore
+├── references/
+│   ├── 00-source-dossier.md
+│   ├── 01-adaptive-framework.md
+│   ├── 02-ai-prd-playbook.md
+│   ├── 03-prompt-rag-agent-skill-harness.md
+│   ├── 04-evals-model-selection-roi.md
+│   ├── 05-candidate-profile.md
+│   ├── 06-byte-volcengine.md
+│   ├── 07-tencent-csig.md
+│   ├── 08-education-aipm.md
+│   ├── 09-answer-bank.md
+│   ├── 10-question-bank.md
+│   ├── 11-industry-theses.md
+│   ├── 12-web-research-baseline.md
+│   ├── 13-deep-ai-topics.md
+│   ├── 14-adaptive-training-loop.md
+│   ├── 15-prd-source-extract.md
+│   ├── 16-video-skill-semantic-transcript.md
+│   └── 17-video-prd-semantic-transcript.md
+└── templates/
+    ├── ai-prd-template.md
+    └── mock-interview-scorecard.md
+
+==================================================
+4. 内容边界
+==================================================
+
+不要：
+- 改写Simon个人经历
+- 发明新的项目结果
+- 改真实数字
+- 把面经观点写成公司官方事实
+- 删除视频转写的“非逐字音频稿”说明
+- 把所有references塞进SKILL.md
+- 为了“更专业”堆AI黑话
+
+只允许：
+- 修复Markdown语法
+- 修复相对路径
+- 修复frontmatter
+- 修复明显错别字
+- 增加README导航
+- 为安装/校验增加必要文件
+
+==================================================
+5. Skill QA
+==================================================
+
+检查：
+
+1. `SKILL.md` 第一行必须是 `---`
+2. YAML必须包含：
+   name: aipm-interview
+3. description准确
+4. SKILL中所有 `references/...` 路径必须存在
+5. references文件名大小写完全一致
+6. 不存在循环/无效引用
+7. SYSTEM_PROMPT独立存在
+8. progressive disclosure保留：
+   - SKILL只放核心路由
+   - 深内容放references
+9. README可正常显示
+10. 中文UTF-8无乱码
+
+==================================================
+6. 隐私 / Secret QA
+==================================================
+
+禁止新增或提交：
+
+- 手机号
+- 身份证
+- 家庭住址
+- API keys
+- GitHub PAT
+- 密码
+- cookie
+- .env
+
+检查常见secret pattern。
+
+`.gitignore` 必须至少包含：
+
+.DS_Store
+.aipm-interview/session-notes/
+.env
+.env.*
+*.key
+*.pem
+
+如果发现真实secret：
+停止push并报告位置。
+
+==================================================
+7. Git
+==================================================
+
+如果不是repo：
+
+git init
+git branch -M main
+
+只设置当前repo identity：
+
+git config user.name "Xiang Zhang"
+git config user.email "300416731+Simonxz578@users.noreply.github.com"
+
+然后：
+
+git status
+git add .
+git commit -m "feat: add adaptive AIPM interview skill"
+
+不要amend其他项目历史。
+不要force。
+
+==================================================
+8. GitHub发布
+==================================================
+
+运行：
+
+gh auth status
+
+必须确认当前账号是：
+
+Simonxz578
+
+如果登录正常且同名repo不存在：
+
+gh repo create Simonxz578/aipm-interview --private --source=. --remote=origin --push
+
+如果repo已经存在：
+
+- 先确认owner是Simonxz578
+- 检查其内容是否就是本项目
+- 若无法确认，停止
+- 若确认是本项目，用正常pull/rebase/merge流程更新
+- 绝不force push
+
+如果gh未登录：
+不要索取密码。
+保留本地commit，并输出最短的登录/发布步骤。
+
+==================================================
+9. Repo metadata
+==================================================
+
+如果支持，description设为：
+
+Adaptive AI Product Manager interview skill for business cases, agents, RAG, Skills, Harness, AI PRDs, evals, education AI and company-specific preparation.
+
+不要创建GitHub Pages。
+不要创建Release。
+不要创建Actions，除非已有且必要。
+
+==================================================
+10. 发布后验证
+==================================================
+
+必须实际检查：
+
+- repo存在
+- visibility = private
+- default branch = main
+- 最新commit已push
+- README可打开
+- SKILL可打开
+- SYSTEM_PROMPT可打开
+- 18个references全部存在
+- 2个templates存在
+- .gitignore存在
+- session-notes没有提交
+- secret scan通过
+- 没有意外的大文件/视频/PDF被上传
+
+特别注意：
+不要把原始屏幕录制MP4或带作者水印的PRD PDF提交到GitHub。
+仓库只保存整理后的文本和方法。
+
+==================================================
+11. 最终报告
+==================================================
+
+只报告：
+
+1. 本地路径
+2. GitHub repo URL
+3. visibility
+4. commit hash
+5. 文件总数
+6. SKILL frontmatter QA
+7. references路径QA
+8. secret scan
+9. push结果
+10. 唯一阻塞点（如有）
+
+不要在最后重新生成一份新的Skill。

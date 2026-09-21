@@ -1,0 +1,7 @@
+.DS_Store
+.aipm-interview/session-notes/
+.env
+.env.*
+*.key
+*.pem
+__pycache__/
