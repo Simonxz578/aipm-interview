@@ -14,6 +14,8 @@
 ## 2. 先识别面试官在考什么
 事实知识 / 产品Sense / 业务拆解 / 技术理解 / Agent架构 / 指标口径 / 项目真实性 / Ownership / 公司理解 / 沟通。
 
+先识别本题核心能力：business judgment、ownership、analysis/planning、influence、collaboration、innovation、prioritization、learning agility、technical depth、eval/data、commercial sense。只用来选证据和重点，不把标签念给面试官。
+
 只输出结论和必要理由，不展示冗长私有推理。
 
 ## 3. 业务题默认逻辑
@@ -71,13 +73,16 @@ Physics/工程理解 + AI教育研究 + 长期教学 + 工业AI/多模态 + Nine
 明确区分：公开事实 / 面试推断 / 产品假设。
 
 ## 9. 输出
-快答：结论1句 + 2–4关键点 + 1个取舍。
-标准业务面：宏观拆解 → 选关键环节下钻 → 指标/评测 → 风险/下一步。
-项目深挖：背景 → 我负责 → 为什么选 → 方案 → 证据 → Bad Case → 重做。
-开放题：定义目标/用户 → 2–3类方案 → 选优先项 → MVP → 指标 → 风险。
+读取 `references/18-interview-answer-architecture.md`，使用其quick / standard / scenario / deep-dive / pressure follow-up长度约定，用户明确要求优先。主回答先给完整自然中文口述，再按需附追问；参考要点不能代替口述。
+
+产品题内部按Product 8 Questions组织；开放题先交代全局，再选关键分支讲透。项目/行为题读取 `references/19-candidate-story-bank.md`，使用WSTAR-RT。Action应占主回答50%–65%，不足50%时自动重写，优先删背景并讲清已有行动，不虚构情节或指标；证据不够则换故事或明确缺口。
+
+每个答案至少有一个明确判断、一个具体动作或产品机制、一个验证方式/指标/真实结果。复杂题还要有风险或取舍。缺点讲真实影响和纠正机制，求职动机对应JD核心问题及个人证据。
+
+禁止四五段空泛“首先其次再次”、连续堆8个概念、用模型准确率代替业务成功、用满意度代替Agent任务成功、用“有数据”代替数据改进机制、用“Multi-Agent更高级”解释架构、用无证据数字包装项目。
 
 ## 10. 模拟闭环
-问一道 → 等回答 → 针对薄弱点追问 → 打分 → 两个最高ROI改进 → 90秒修正版 → 弱点标签 → 换场景继续训练。
+问一道 → 等回答 → 针对薄弱点追问 → 打分 → 两个最值得改进的点 → 对应深度的修正版 → 弱点标签 → 换场景继续训练。行为题额外检查具体例子、Action占比、ownership、结果证据、反思与岗位迁移。连续两次用同一案例后，下一题优先换案例；面试官主动深挖除外。记录见 `references/14-adaptive-training-loop.md`。
 
 ## Synthesis Contract
 
@@ -102,12 +107,12 @@ When answering an interview question:
    → how I would measure it
    → key trade-off or risk
 
-5. If the exact question has no pre-written answer in `09-answer-bank.md`, synthesize a new answer from:
+5. If the exact question has no pre-written answer in `references/09-answer-bank.md`, synthesize a new answer from:
 
    - the relevant business framework,
    - technical references,
    - latest company/product research when needed,
-   - and `05-candidate-profile.md`.
+   - and `references/05-candidate-profile.md`.
 
 6. Do not invent personal experience merely to make the answer sound complete.
    Clearly distinguish:
@@ -116,12 +121,15 @@ When answering an interview question:
    - “In my project…”
    - “If I were responsible for this business, I would…”
 
-7. Default output depth:
+7. Select answer depth from `references/18-interview-answer-architecture.md`:
 
-   - quick question: 30–45 seconds of complete spoken prose;
-   - standard business question: 90 seconds–3 minutes;
-   - project deep dive: 2–4 minutes;
-   - technical follow-up: answer the direct question first, then explain the product implication.
+   - quick: 180–280 Chinese characters, roughly 40–60 seconds;
+   - standard: 320–520 characters, roughly 75–120 seconds, normally at least 250 characters;
+   - scenario: 450–700 characters, roughly 2–3 minutes, including baseline, actions, metrics and fallback;
+   - project / behavioral deep-dive: 600–900 characters, roughly 2.5–4 minutes, with evidenced actions taking 50%–65% and a reflection;
+   - pressure follow-up: one direct sentence, then 120–250 characters addressing only the follow-up.
+
+   Count the main spoken answer only. Timing is approximate. Explicit user length requests override defaults; never invent facts to meet a length target.
 
 8. Bullet points may be used after the spoken answer for interviewer follow-ups, metrics, or comparison tables, but they must not replace the main spoken answer.
 

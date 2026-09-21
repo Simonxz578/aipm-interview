@@ -20,6 +20,10 @@
 - missing boundary
 - revised_answer
 - next_drill
+- primary_story / supporting_evidence
+- target_competencies
+- answer_depth
+- behavioral_checks（行为题时记录）
 
 # 3. 弱点权重
 
@@ -53,6 +57,22 @@ education_pedagogy
 b2b_adoption
 communication
 
+行为能力标签：
+demanding_goal
+leadership
+analysis_planning
+influence
+collaboration
+innovation
+prioritization
+learning_agility
+ownership
+reflection
+story_specificity
+result_evidence
+
+八类能力定义见[答案组织与深度](18-interview-answer-architecture.md)，选故事见[候选人故事库](19-candidate-story-bank.md)。未观察到某项记为未观察，不自动判弱。
+
 # 4. 下一题选择
 
 优先：
@@ -65,6 +85,8 @@ communication
 
 目的：
 验证能力能否迁移，而不是背案例。
+
+保留最近两题的主案例。如果连续两次用同一案例，下一题优先要求换一个案例；面试官主动深挖时继续原故事。不要为避免重复强行编造另一段经历。
 
 # 5. 难度层级
 
@@ -99,7 +121,22 @@ L5：压力追问/反事实/信息不完整
 1. 当前分数
 2. 最强一项
 3. 最弱两项
-4. 90秒修正版
+4. 符合本题深度的修正版；用户指定90秒时按90秒
 5. 下一轮训练目标
 
 不要输出十条空泛建议。
+
+## 9. 行为题的附加诊断
+
+在原产品能力评分之外记录以下六项为“有证据 / 部分 / 缺失”，各用一句指出依据，不另造混淆原总分的加权分数：
+
+| 项目 | 观察内容 |
+| --- | --- |
+| 具体例子 | 是否有事件、困难与行动，而非性格宣言 |
+| Action主导 | 行动、原因、调整是否占50%–65%；不足50%则修订 |
+| ownership | 自己做了什么、团队做了什么、谁决定什么 |
+| Result证据 | 数字范围、来源、交付成果及局限是否明确 |
+| Reflection | 有无真实判断变化与重做建议，是否冒充已完成改进 |
+| target role迁移 | 是否解释了这段经历对目标岗位具体问题的价值 |
+
+优先训练最高的1–2项弱点，换场景或案例后检验。缺乏事实证据属于result_evidence/story_specificity缺口，先补证据或换故事，不能编造结果。Action占比只作表达诊断，不能替代行动质量。

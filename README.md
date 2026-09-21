@@ -24,6 +24,13 @@
 
 回答先从业务和用户进入，再决定 AI 应该出现在哪里；不会为了显得技术先进而强行使用 Agent / Multi-Agent。
 
+## 回答组织与深度
+
+- Product 8 Questions：从问题、角色与场景到方案、验证、成本和迭代，回答时选重点展开。
+- WSTAR-RT：项目与行为题讲清个人行动、真实结果、反思及岗位关联。
+- Behavioral story bank：经纬恒润、Ninefold Physics、IJSE三个主案例，按能力与证据边界选用。
+- Answer-depth routing：区分单点快答、普通业务题、复杂场景、项目深挖和压力追问；28个母题示范完整口述，用户指定时长优先。
+
 ## 推荐用法
 
 - `用 aipm-interview 模拟腾讯教育AI产品一面，一次一道题。`
@@ -47,7 +54,7 @@
 - `references/06-byte-volcengine.md`：字节/火山引擎
 - `references/07-tencent-csig.md`：腾讯CSIG/腾讯教育
 - `references/08-education-aipm.md`：教育AIPM场景
-- `references/09-answer-bank.md`：高频答案骨架
+- `references/09-answer-bank.md`：28个母题口述示范与补充追问材料
 - `references/10-question-bank.md`：214道业务/AI/教育/产品题
 - `references/11-industry-theses.md`：行业观点库
 - `references/12-web-research-baseline.md`：网页研究基线
@@ -56,6 +63,8 @@
 - `references/15-prd-source-extract.md`：上传PRD完整结构化整理
 - `references/16-video-skill-semantic-transcript.md`：Skill视频完整语义稿
 - `references/17-video-prd-semantic-transcript.md`：PRD视频完整语义稿
+- `references/18-interview-answer-architecture.md`：答题结构、长度与AI产品专项判断
+- `references/19-candidate-story-bank.md`：三大主案例与行为能力证据
 - `templates/ai-prd-template.md`
 - `templates/mock-interview-scorecard.md`
 

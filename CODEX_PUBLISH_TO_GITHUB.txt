@@ -58,7 +58,7 @@ aipm-interview
 - force push / rewrite history
 - 覆盖无法确认来源的同名repo
 - 需要账号密码/PAT/权限升级
-- 要把private改public
+- 需要改变当前repo visibility且用户未明确授权
 - 检测到secret
 
 ==================================================
@@ -73,14 +73,10 @@ Simonxz578
 
 Simonxz578/aipm-interview
 
-默认必须：
+发布前读取当前visibility，并保持原样（preserve current repository visibility）。
 
-PRIVATE
-
-原因：
-`references/05-candidate-profile.md` 包含个性化求职和职业经历材料。
-
-不要擅自改 public。
+本仓库已由用户授权设为PUBLIC；以后以GitHub实时查询结果为准，不硬编码private/public转换。
+`references/05-candidate-profile.md` 包含个性化材料，仍需执行隐私检查。若仓库不存在，先确认新仓库visibility再创建。
 
 ==================================================
 3. 必须保留的目录结构
@@ -110,7 +106,9 @@ aipm-interview/
 │   ├── 14-adaptive-training-loop.md
 │   ├── 15-prd-source-extract.md
 │   ├── 16-video-skill-semantic-transcript.md
-│   └── 17-video-prd-semantic-transcript.md
+│   ├── 17-video-prd-semantic-transcript.md
+│   ├── 18-interview-answer-architecture.md
+│   └── 19-candidate-story-bank.md
 └── templates/
     ├── ai-prd-template.md
     └── mock-interview-scorecard.md
@@ -135,6 +133,7 @@ aipm-interview/
 - 修复明显错别字
 - 增加README导航
 - 为安装/校验增加必要文件
+- 按用户明确的内容升级请求修改回答架构、示范答案、案例证据、训练路由与已核验事实；不受旧版“只做格式修复”的范围限制
 
 ==================================================
 5. Skill QA
@@ -202,7 +201,7 @@ git config user.email "300416731+Simonxz578@users.noreply.github.com"
 然后：
 
 git status
-git add .
+git add -- <逐个列明本次已校验的文本文件>
 git commit -m "feat: add adaptive AIPM interview skill"
 
 不要amend其他项目历史。
@@ -222,7 +221,7 @@ Simonxz578
 
 如果登录正常且同名repo不存在：
 
-gh repo create Simonxz578/aipm-interview --private --source=. --remote=origin --push
+先确认创建意图及visibility；不沿用旧指令自动创建PRIVATE或PUBLIC仓库。
 
 如果repo已经存在：
 
@@ -255,13 +254,13 @@ Adaptive AI Product Manager interview skill for business cases, agents, RAG, Ski
 必须实际检查：
 
 - repo存在
-- visibility = private
+- visibility与发布前读取值一致
 - default branch = main
 - 最新commit已push
 - README可打开
 - SKILL可打开
 - SYSTEM_PROMPT可打开
-- 18个references全部存在
+- 20个references（00–19）全部存在，未来增删时按实际数量校验
 - 2个templates存在
 - .gitignore存在
 - session-notes没有提交
@@ -269,7 +268,8 @@ Adaptive AI Product Manager interview skill for business cases, agents, RAG, Ski
 - 没有意外的大文件/视频/PDF被上传
 
 特别注意：
-不要把原始屏幕录制MP4或带作者水印的PRD PDF提交到GitHub。
+不要把原始屏幕录制MP4、source PDF/xlsx、提取缓存、临时文件或本地更新任务说明提交到GitHub。
+只stage本次确认的文本变更。
 仓库只保存整理后的文本和方法。
 
 ==================================================

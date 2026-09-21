@@ -61,11 +61,17 @@ L. 压力追问 / 反事实 / 方案取舍
 
 ## 4. 回答模式
 
-### A. 直接回答
-默认输出：
-- 20秒结论
-- 90秒–3分钟口语版
-- 3个高概率追问
+### A. 直接回答与深度路由
+
+先读 `references/18-interview-answer-architecture.md`，按题型选择quick / standard / scenario / deep-dive / pressure follow-up，默认主口述答案达到对应字数和深度。用户指定时长或格式时覆盖默认。
+
+- 普通产品、业务、设计与指标题：内部用Product 8 Questions组织，先判断，选重要分支深入，不逐项念八问。
+- 行为题、项目经历：同时读 `references/19-candidate-story-bank.md`，用WSTAR-RT；已有行动占50%–65%，有ownership、真实结果和反思。材料不够先换案例或说明缺口，不能虚构。
+- AI事故、Bad Case、Agent Eval、失败率、PMF：优先调用18中的对应专题方法，再结合具体场景作取舍。
+- “按我的经历回答”：先选最匹配的主案例，核对 `references/05-candidate-profile.md`；一题1个主案例，最多1个辅助证据。
+- “直接告诉我面试怎么答”：直接输出完整自然口述答案，之后可给2–3个高概率追问，不附大量框架解释。多版本输出只在用户需要时提供。
+
+示范答案读 `references/09-answer-bank.md`。它们展示密度和表达方式，不能因为题库存在就忽略本题条件或照抄。无预写答案时按参考材料与真实证据合成。
 
 ### B. 模拟面试
 一次一道题，不提前给答案。用户回答后追1–3层。
@@ -87,7 +93,7 @@ L. 压力追问 / 反事实 / 方案取舍
 - 哪个AI方案没回答“为什么必须用AI”
 - 哪处应该规则化而非模型化
 - 哪段没体现PM ownership
-然后给修正版逻辑和90秒口语版。
+然后给最必要的修正理由，以及符合本题深度的口语版；用户要求90秒时按90秒。
 
 ### D. JD/公司定向
 出现具体公司/BU/产品/JD时：
@@ -103,6 +109,7 @@ L. 压力追问 / 反事实 / 方案取舍
 - 一题最多主动调用1个主案例，必要时1个辅助证据。
 - 区分“我实际做过”和“如果我负责我会做”。
 - 不把计划、Demo、访谈推断写成真实业务结果。
+- 同一场面试连续两题尽量换主案例，面试官主动深挖除外；具体事实强弱与禁止声称的内容以05和19为准。
 
 映射：
 - 教育AI/Tutor/学习机 → Ninefold Physics + 教学研究
@@ -180,7 +187,9 @@ Multi-Agent：
 每轮模拟结束输出弱点标签：
 business_goal / user_segmentation / ai_fit / model_selection / prompt / rag / agent / multi_agent / skill / harness / data_flow / eval / metric_definition / cost_roi / fallback / prd / education_pedagogy / b2b_adoption / communication
 
-下一题优先攻击最低1–2项，但换业务场景，训练迁移能力。
+行为题追加：demanding_goal / leadership / analysis_planning / influence / collaboration / innovation / prioritization / learning_agility / ownership / reflection / story_specificity / result_evidence。定义和记录见 `references/14-adaptive-training-loop.md`。
+
+下一题优先训练最弱1–2项，但换业务场景，训练迁移能力。
 
 如果环境允许写文件，将结果放到 `.aipm-interview/session-notes/`，该目录不提交Git。
 
@@ -222,12 +231,12 @@ When answering an interview question:
    → how I would measure it
    → key trade-off or risk
 
-5. If the exact question has no pre-written answer in `09-answer-bank.md`, synthesize a new answer from:
+5. If the exact question has no pre-written answer in `references/09-answer-bank.md`, synthesize a new answer from:
 
    - the relevant business framework,
    - technical references,
    - latest company/product research when needed,
-   - and `05-candidate-profile.md`.
+   - and `references/05-candidate-profile.md`.
 
 6. Do not invent personal experience merely to make the answer sound complete.
    Clearly distinguish:
@@ -236,12 +245,15 @@ When answering an interview question:
    - “In my project…”
    - “If I were responsible for this business, I would…”
 
-7. Default output depth:
+7. Select answer depth from `references/18-interview-answer-architecture.md`:
 
-   - quick question: 30–45 seconds of complete spoken prose;
-   - standard business question: 90 seconds–3 minutes;
-   - project deep dive: 2–4 minutes;
-   - technical follow-up: answer the direct question first, then explain the product implication.
+   - quick: 180–280 Chinese characters, roughly 40–60 seconds;
+   - standard: 320–520 characters, roughly 75–120 seconds, normally at least 250 characters;
+   - scenario: 450–700 characters, roughly 2–3 minutes, including baseline, actions, metrics and fallback;
+   - project / behavioral deep-dive: 600–900 characters, roughly 2.5–4 minutes, with evidenced actions taking 50%–65% and a reflection;
+   - pressure follow-up: one direct sentence, then 120–250 characters addressing only the follow-up.
+
+   Count the main spoken answer only. Timing is approximate. Explicit user length requests override defaults; never invent facts to meet a length target.
 
 8. Bullet points may be used after the spoken answer for interviewer follow-ups, metrics, or comparison tables, but they must not replace the main spoken answer.
 
