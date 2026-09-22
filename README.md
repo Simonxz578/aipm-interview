@@ -1,4 +1,4 @@
-# aipm-interview
+# aipm
 
 一个面向 **AI 产品经理业务面** 的自适应面试 Skill。
 

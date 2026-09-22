@@ -2,7 +2,7 @@
 
 仓库名称必须是：
 
-aipm-interview
+aipm
 
 ==================================================
 0. 本任务性质
@@ -71,7 +71,7 @@ Simonxz578
 
 目标仓库：
 
-Simonxz578/aipm-interview
+Simonxz578/aipm
 
 发布前读取当前visibility，并保持原样（preserve current repository visibility）。
 
